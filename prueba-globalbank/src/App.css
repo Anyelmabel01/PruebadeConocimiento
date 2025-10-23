@@ -1,0 +1,215 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  margin: 3rem 0 2rem;
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 3rem 0;
+}
+
+.formulario {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.campo {
+  margin-bottom: 1.5rem;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.campo input[type="text"],
+.campo input[type="date"],
+.campo textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.campo input[type="text"]:focus,
+.campo input[type="date"]:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.campo input[type="text"]::placeholder,
+.campo textarea::placeholder {
+  color: #9ca3af;
+}
+
+.campo textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.campo input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: opacity(0.6);
+}
+
+.campo input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  filter: opacity(1);
+}
+
+.error {
+  display: block;
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.boton-agregar {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.boton-agregar:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.boton-agregar:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.boton-agregar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lista-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tarjeta {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.tarjeta-nombre {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.75rem;
+}
+
+.tarjeta-fecha {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+.tarjeta-comentarios {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tarjeta-comentarios .label {
+  font-weight: 600;
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 2rem 0 1.5rem;
+  }
+
+  .formulario {
+    padding: 1.5rem;
+  }
+
+  .lista-tarjetas {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .tarjeta {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .campo input[type="text"],
+  .campo input[type="date"],
+  .campo textarea {
+    font-size: 16px;
+  }
+
+  .boton-agregar {
+    font-size: 1rem;
+  }
+}

@@ -108,6 +108,9 @@ export default function Formulario() {
 
   return (
     <div className="container" role="main" aria-labelledby="titulo-form">
+      <div className="header-logo">
+        <img src="/logo-globalbank.png" alt="GlobalBank" className="logo" />
+      </div>
       <h2 id="titulo-form">Formulario de Registro</h2>
 
       <form onSubmit={onSubmit} className="formulario" noValidate>

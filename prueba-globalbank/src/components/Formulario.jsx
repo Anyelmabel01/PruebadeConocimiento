@@ -30,8 +30,9 @@ export default function Formulario() {
   const [fecha, setFecha] = useState("");
   const [comentarios, setComentarios] = useState("");
   const [errores, setErrores] = useState({ nombre: "", fecha: "", comentarios: "" });
+  const [darkMode, setDarkMode] = useState(false);
 
-  
+
   const [personas, setPersonas] = useSessionStorage("personas", []);
 
  
@@ -107,13 +108,28 @@ export default function Formulario() {
   const disabled = !nombre || !fecha || !comentarios;
 
   return (
-    <div className="container" role="main" aria-labelledby="titulo-form">
-      <div className="header-logo">
-        <img src="/logo.png" alt="GlobalBank" className="logo" />
-      </div>
-      <h2 id="titulo-form">Formulario de Registro</h2>
+    <div className={`app-wrapper ${darkMode ? 'dark-mode' : ''}`}>
+      <div className="container" role="main" aria-labelledby="titulo-form">
+        <div className="header-logo">
+          <img src="/logo.png" alt="GlobalBank" className="logo" />
+          <div className="dark-mode-switch">
+            <span className="switch-label">Dark Mode</span>
+            <label className="switch">
+              <input
+                type="checkbox"
+                checked={darkMode}
+                onChange={() => setDarkMode(!darkMode)}
+                aria-label="Toggle dark mode"
+              />
+              <span className="slider"></span>
+              <span className="switch-text">{darkMode ? 'ON' : 'OFF'}</span>
+            </label>
+          </div>
+        </div>
 
-      <form onSubmit={onSubmit} className="formulario" noValidate>
+        <div className="form-section">
+          <h2 id="titulo-form">Formulario de Registro</h2>
+          <form onSubmit={onSubmit} className="formulario" noValidate>
         <div className="campo">
           <label htmlFor="nombre">Nombre completo</label>
           <input
@@ -124,7 +140,7 @@ export default function Formulario() {
               setNombre(e.target.value);
               if (errores.nombre) setErrores(prev => ({ ...prev, nombre: "" }));
             }}
-            placeholder="Ej: Juan Pérez"
+            placeholder="Ej: Anyel Villalobos"
             autoComplete="name"
           />
           {errores.nombre && <span className="error" role="alert">{errores.nombre}</span>}
@@ -160,25 +176,29 @@ export default function Formulario() {
           {errores.comentarios && <span className="error" role="alert">{errores.comentarios}</span>}
         </div>
 
-        <button type="submit" className="boton-agregar" disabled={disabled}>
-          Agregar
-        </button>
-      </form>
+            <button type="submit" className="boton-agregar" disabled={disabled}>
+              Agregar
+            </button>
+          </form>
+        </div>
 
-      <hr />
-
-      <h3>Lista de Personas</h3>
-      <div className="lista-tarjetas">
-        {personas.map((p, index) => (
-          <Tarjeta
-            key={p.id}
-            nombre={p.nombre}
-            fechaFormateada={`${ddmmyyyy(p.fecha)}`}
-            edad={`${edadExacta(p.fecha)} años`}
-            comentarios={p.comentarios}
-            style={{"--card-index": index}}
-          />
-        ))}
+        {personas.length > 0 && (
+          <div className="persons-section">
+            <h3>Personas Registradas</h3>
+            <div className="lista-tarjetas">
+              {personas.map((p, index) => (
+                <Tarjeta
+                  key={p.id}
+                  nombre={p.nombre}
+                  fechaFormateada={`${ddmmyyyy(p.fecha)}`}
+                  edad={`${edadExacta(p.fecha)} años`}
+                  comentarios={p.comentarios}
+                  style={{"--card-index": index}}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

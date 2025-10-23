@@ -1,52 +1,65 @@
-# Aplicacion de Registro de Personas
+# 🏦 Aplicación de Registro de Personas - GlobalBank
 
-Aplicacion web desarrollada con React que permite registrar personas con su nombre completo, fecha de nacimiento y comentarios. Los datos se persisten en sessionStorage para evitar perdida de informacion al refrescar la pagina.
+Aplicación web moderna desarrollada con React que permite registrar personas con su nombre completo, fecha de nacimiento y comentarios. Los datos se persisten en sessionStorage para evitar pérdida de información al refrescar la página.
 
-## Caracteristicas
+## ✨ Características Principales
 
-- Formulario interactivo con validaciones en tiempo real
-- Validacion de caracteres especificos para cada campo
-- Calculo automatico de edad basado en fecha de nacimiento
-- Visualizacion de registros en tarjetas
-- Persistencia de datos usando sessionStorage
-- Diseno responsivo para dispositivos moviles y desktop
-- Prevencion de registros duplicados
-- Interfaz de usuario moderna y accesible
+- 🎨 **Modo Oscuro/Claro**: Switch elegante para alternar entre temas
+- 📝 **Formulario interactivo** con validaciones en tiempo real
+- ✅ **Validación robusta** de caracteres específicos para cada campo
+- 🎂 **Cálculo automático de edad** basado en fecha de nacimiento
+- 💾 **Persistencia de datos** usando sessionStorage
+- 🎯 **Prevención de registros duplicados**
+- 📱 **Diseño 100% responsivo** para móviles, tablets y desktop
+- 🎭 **Animaciones suaves** y transiciones elegantes
+- ♿ **Interfaz accesible** con soporte completo de teclado
+- 🚀 **Rendimiento optimizado** con React 19
 
-## Validaciones Implementadas
+## 🎨 Interfaz de Usuario
+
+- **Header elegante** con logo de GlobalBank y gradiente azul
+- **Tarjetas flotantes** con animaciones suaves al hacer hover
+- **Formulario compacto** con campos optimizados
+- **Calendario mejorado** con icono personalizado
+- **Switch de modo oscuro** profesional con indicadores ON/OFF
+- **Colores corporativos** de GlobalBank (azul y blanco)
+
+## 🔍 Validaciones Implementadas
 
 ### Nombre Completo
-- No puede estar vacio
-- Solo acepta caracteres alfabeticos (A-Z)
-- Permite espacios en blanco
-- Permite letras con tildes (áéíóú, ÁÉÍÓÚ, ñ, Ñ)
+- ❌ No puede estar vacío
+- ✅ Solo acepta caracteres alfabéticos (A-Z, a-z)
+- ✅ Permite espacios en blanco
+- ✅ Permite letras con tildes (áéíóú, ÁÉÍÓÚ, ñ, Ñ)
+- 📝 Ejemplo: "Anyel Villalobos"
 
 ### Fecha de Nacimiento
-- Formato tipo calendario (input date)
-- Fecha minima: 01/01/1900
-- Fecha maxima: Dia actual
-- Validacion automatica del rango
+- 📅 Formato tipo calendario visual (input date)
+- 📌 Fecha mínima: 01/01/1900
+- 📌 Fecha máxima: Día actual
+- ✅ Validación automática del rango
+- �� Icono de calendario personalizado con hover effect
 
 ### Comentarios
-- No puede estar vacio
-- Acepta caracteres alfanumericos (A-Z, 0-9)
-- Acepta los siguientes caracteres especiales:
+- ❌ No puede estar vacío
+- ✅ Acepta caracteres alfanuméricos (A-Z, 0-9)
+- ✅ Acepta los siguientes caracteres especiales:
   - Punto (.)
   - Coma (,)
   - Comillas simples y dobles (' ")
   - Ampersand (&)
   - Arroba (@)
-  - Signo de dolar ($)
+  - Signo de dólar ($)
   - Asterisco (*)
-  - Parentesis ( )
+  - Paréntesis ( )
   - Guion medio (-)
   - Punto y coma (;)
-  - Signos de interrogacion (? ¿)
+  - Signos de interrogación (? ¿)
   - Espacios en blanco
 
-## Formato de Tarjetas
+## 📋 Formato de Tarjetas
 
-Cada registro se muestra en una tarjeta con la siguiente informacion:
+Cada registro se muestra en una tarjeta elegante con:
 
 ```
 [Nombre Completo]
@@ -54,26 +67,34 @@ Cada registro se muestra en una tarjeta con la siguiente informacion:
 Comentarios: [texto del comentario]
 ```
 
-## Tecnologias Utilizadas
+Las tarjetas incluyen:
+- 🎨 Borde azul de acento en el lado izquierdo
+- ✨ Animación de entrada escalonada
+- 🎯 Hover effect que levanta la tarjeta
+- 🌓 Adaptación automática al modo oscuro
+- 📱 Diseño responsivo
 
-- React 19.2.0
-- React Hooks (useState, useEffect, useMemo)
-- CSS3 con diseño responsivo
-- SessionStorage API
-- Testing Library para pruebas unitarias
-- Jest como framework de testing
+## 🛠️ Tecnologías Utilizadas
 
-## Requisitos Previos
+- **React** 19.2.0
+- **React Hooks** (useState, useEffect, useMemo)
+- **CSS3** con diseño responsivo y animaciones
+- **SessionStorage API** para persistencia
+- **Testing Library** para pruebas unitarias
+- **Jest** como framework de testing
+- **Custom Hooks** (useSessionStorage)
 
-- Node.js (version 14 o superior)
-- npm (version 6 o superior)
+## 📋 Requisitos Previos
 
-## Instalacion
+- Node.js (versión 14 o superior)
+- npm (versión 6 o superior)
+
+## 🚀 Instalación
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/prueba-globalbank.git
-cd prueba-globalbank
+git clone https://github.com/Anyelmabel01/PruebadeConocimiento.git
+cd PruebadeConocimiento/prueba-globalbank
 ```
 
 2. Instalar dependencias:
@@ -81,7 +102,14 @@ cd prueba-globalbank
 npm install
 ```
 
-## Scripts Disponibles
+3. Iniciar el servidor de desarrollo:
+```bash
+npm start
+```
+
+4. Abrir [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+## 📜 Scripts Disponibles
 
 ### Modo Desarrollo
 
@@ -89,11 +117,10 @@ npm install
 npm start
 ```
 
-Ejecuta la aplicacion en modo desarrollo.
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
-
-La pagina se recarga automaticamente cuando realizas cambios.
-Los errores de lint se muestran en la consola.
+Ejecuta la aplicación en modo desarrollo.
+- La página se recarga automáticamente cuando realizas cambios
+- Los errores de lint se muestran en la consola
+- Hot Module Replacement habilitado
 
 ### Ejecutar Tests
 
@@ -102,53 +129,60 @@ npm test
 ```
 
 Lanza el test runner en modo interactivo.
-Ejecuta todas las pruebas unitarias y muestra los resultados.
+- Ejecuta todas las pruebas unitarias (23 tests)
+- Muestra resultados en tiempo real
+- Coverage incluido
 
-### Build de Produccion
+### Build de Producción
 
 ```bash
 npm run build
 ```
 
-Construye la aplicacion para produccion en la carpeta `build`.
-Optimiza el bundle para mejor rendimiento.
-Los archivos estan minificados y listos para deployment.
+Construye la aplicación para producción en la carpeta `build`:
+- Bundle optimizado para mejor rendimiento
+- Archivos minificados
+- Code splitting automático
+- Listo para deployment
 
-## Estructura del Proyecto
+## 📁 Estructura del Proyecto
 
 ```
 prueba-globalbank/
 ├── public/
 │   ├── index.html
-│   └── ...
+│   ├── logo.png              # Logo de GlobalBank
+│   └── background.avif       # Imagen de fondo
 ├── src/
 │   ├── components/
-│   │   ├── Formulario.jsx       # Componente principal del formulario
-│   │   ├── Formulario.test.js   # Tests del formulario
-│   │   └── Tarjeta.jsx          # Componente de tarjeta de persona
+│   │   ├── Formulario.jsx       # Componente principal con modo oscuro
+│   │   ├── Formulario.test.js   # 18 tests del formulario
+│   │   └── Tarjeta.jsx          # Componente de tarjeta elegante
 │   ├── hooks/
-│   │   ├── useSessionStorage.js      # Hook personalizado para sessionStorage
-│   │   └── useSessionStorage.test.js # Tests del hook
-│   ├── App.jsx                  # Componente raiz
-│   ├── App.css                  # Estilos globales
+│   │   ├── useSessionStorage.js      # Hook personalizado
+│   │   └── useSessionStorage.test.js # 5 tests del hook
+│   ├── App.jsx                  # Componente raíz
+│   ├── App.css                  # Estilos globales con animaciones
+│   ├── background.avif          # Background corporativo
 │   ├── index.js                 # Punto de entrada
 │   └── index.css                # Estilos base
 ├── package.json
 └── README.md
 ```
 
-## Pruebas Unitarias
+## 🧪 Pruebas Unitarias
 
-El proyecto incluye pruebas unitarias exhaustivas que cubren:
+El proyecto incluye **23 pruebas unitarias** exhaustivas que cubren:
 
-- Renderizado correcto de componentes
-- Validaciones de campos
-- Funcionalidad de envio de formulario
-- Calculo de edad
-- Persistencia en sessionStorage
-- Prevencion de duplicados
-- Manejo de errores
-- Casos extremos
+✅ Renderizado correcto de componentes
+✅ Validaciones de todos los campos
+✅ Funcionalidad de envío de formulario
+✅ Cálculo preciso de edad
+✅ Persistencia en sessionStorage
+✅ Prevención de duplicados
+✅ Manejo de errores
+✅ Casos extremos
+✅ Hook personalizado useSessionStorage
 
 Para ejecutar las pruebas:
 
@@ -156,61 +190,109 @@ Para ejecutar las pruebas:
 npm test
 ```
 
-Para ver el coverage:
+Para ver el coverage completo:
 
 ```bash
 npm test -- --coverage
 ```
 
-## Diseño Responsivo
+**Resultado actual**: ✅ 23/23 tests passing
 
-La aplicacion se adapta automaticamente a diferentes tamaños de pantalla:
+## 📱 Diseño Responsivo
 
-- **Desktop (>768px)**: Grid de tarjetas en multiples columnas
-- **Tablet (768px)**: Layout adaptado con columna unica
-- **Mobile (<480px)**: Optimizacion de tamaños de fuente y espaciado
+La aplicación se adapta perfectamente a diferentes dispositivos:
 
-## Persistencia de Datos
+| Dispositivo | Breakpoint | Características |
+|------------|------------|-----------------|
+| 🖥️ **Desktop** | >768px | Grid de tarjetas en múltiples columnas, switch completo |
+| 📱 **Tablet** | ≤768px | Layout adaptado, switch reducido |
+| 📱 **Mobile** | ≤480px | Columna única, elementos compactos |
 
-Los datos se almacenan en sessionStorage del navegador:
+## 💾 Persistencia de Datos
 
-- Los registros persisten al refrescar la pagina (F5)
-- Los datos se mantienen durante la sesion del navegador
-- Se limpian al cerrar la pestaña o navegador
-- No se requiere backend ni base de datos
+Los datos se almacenan usando **sessionStorage**:
 
-## Accesibilidad
+- ✅ Los registros persisten al refrescar la página (F5)
+- ✅ Los datos se mantienen durante la sesión del navegador
+- ✅ Se limpian al cerrar la pestaña o navegador
+- ✅ No requiere backend ni base de datos
+- ✅ Sincronización automática en tiempo real
 
-- Labels asociados correctamente a inputs
-- Roles ARIA para mensajes de error
-- Navegacion por teclado funcional
-- Mensajes de error descriptivos
-- Botones con estados disabled apropiados
+## ♿ Accesibilidad
 
-## Compatibilidad de Navegadores
+- ✅ Labels asociados correctamente a inputs
+- ✅ Roles ARIA para mensajes de error
+- ✅ Navegación por teclado completamente funcional
+- ✅ Mensajes de error descriptivos y claros
+- ✅ Botones con estados disabled apropiados
+- ✅ Contraste de colores WCAG AA compliant
+- ✅ Switch de modo oscuro con aria-label
 
-- Chrome (ultima version)
-- Firefox (ultima version)
-- Safari (ultima version)
-- Edge (ultima version)
+## 🌐 Compatibilidad de Navegadores
 
-## Mejoras Futuras
+| Navegador | Versión Mínima |
+|-----------|----------------|
+| Chrome | 90+ |
+| Firefox | 88+ |
+| Safari | 14+ |
+| Edge | 90+ |
 
-Posibles mejoras que se podrian implementar:
+## 🎯 Características Implementadas vs Requerimientos
 
-- Boton para eliminar registros individuales
-- Opcion para editar registros existentes
-- Filtros y busqueda de registros
-- Exportacion de datos a CSV/JSON
-- Paginacion para grandes cantidades de registros
-- LocalStorage como alternativa a sessionStorage
-- Animaciones mas elaboradas
-- Temas claro/oscuro
+| Requerimiento | Estado | Notas |
+|--------------|--------|-------|
+| Validación de nombre (solo letras + tildes) | ✅ | Regex implementado |
+| Validación fecha (1900 - hoy) | ✅ | Con calendario visual |
+| Validación comentarios (alfanumérico + especiales) | ✅ | Lista completa de caracteres |
+| Mostrar tarjetas con formato específico | ✅ | dd/mm/yyyy + edad |
+| Persistencia con sessionStorage | ✅ | Funcional con F5 |
+| Prevenir duplicados | ✅ | Por nombre + fecha |
+| Diseño responsivo | ✅ | Mobile, tablet, desktop |
+| Tests unitarios | ✅ | 23 tests passing |
 
-## Licencia
+## 🎨 Modo Oscuro
 
-Este proyecto fue desarrollado como prueba tecnica.
+La aplicación incluye un elegante switch de modo oscuro que:
 
-## Contacto
+- 🌓 Alterna entre modo claro y oscuro
+- 💫 Transiciones suaves en todos los elementos
+- 🎨 Colores optimizados para legibilidad en ambos modos
+- 💾 Estado se mantiene durante la sesión
+- 📱 Funciona perfectamente en móviles
 
-Para cualquier consulta o sugerencia, contactar al desarrollador.
+## 🚀 Mejoras Implementadas
+
+Además de los requerimientos base:
+
+- ✅ Modo oscuro completo con switch elegante
+- ✅ Animaciones y transiciones suaves
+- ✅ Tarjetas flotantes con hover effects
+- ✅ Header rediseñado con bordes redondeados
+- ✅ Calendario personalizado con icono SVG
+- ✅ Formulario compacto y optimizado
+- ✅ Background corporativo con overlay
+- ✅ Custom hooks reutilizables
+- ✅ Cobertura completa de tests
+
+## 📈 Posibles Mejoras Futuras
+
+- 🗑️ Botón para eliminar registros individuales
+- ✏️ Opción para editar registros existentes
+- 🔍 Filtros y búsqueda de registros
+- 📤 Exportación de datos a CSV/JSON
+- 📄 Paginación para grandes cantidades de registros
+- 💾 LocalStorage como alternativa a sessionStorage
+- 📊 Estadísticas de registros
+- 🌍 Internacionalización (i18n)
+
+## 👨‍💻 Autor
+
+Desarrollado como prueba técnica para **GlobalBank**
+
+## 📄 Licencia
+
+Este proyecto fue desarrollado como prueba de conocimiento.
+
+---
+
+⭐ **Si te gustó este proyecto, dale una estrella en GitHub!**

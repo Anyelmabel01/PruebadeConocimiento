@@ -109,7 +109,7 @@ export default function Formulario() {
   return (
     <div className="container" role="main" aria-labelledby="titulo-form">
       <div className="header-logo">
-        <img src="/logo-globalbank.png" alt="GlobalBank" className="logo" />
+        <img src="/logo.png" alt="GlobalBank" className="logo" />
       </div>
       <h2 id="titulo-form">Formulario de Registro</h2>
 
@@ -169,13 +169,14 @@ export default function Formulario() {
 
       <h3>Lista de Personas</h3>
       <div className="lista-tarjetas">
-        {personas.map((p) => (
+        {personas.map((p, index) => (
           <Tarjeta
             key={p.id}
             nombre={p.nombre}
             fechaFormateada={`${ddmmyyyy(p.fecha)}`}
             edad={`${edadExacta(p.fecha)} años`}
             comentarios={p.comentarios}
+            style={{"--card-index": index}}
           />
         ))}
       </div>
